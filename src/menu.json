@@ -1,0 +1,40 @@
+{
+  "Links": [
+    {
+      "id": 1,
+      "icon": "menu-link__container__icon glyphicon glyphicon-home",
+      "text": "home",
+      "link": "/"
+     },
+     {
+      "id": 3,
+      "icon": "menu-link__container__icon glyphicon glyphicon-exclamation-sign",
+      "text": "Help",
+      "link": "/help"
+     },
+     {
+      "id": 4,
+      "icon": "menu-link__container__icon glyphicon glyphicon-question-sign",
+      "text": "FAQ",
+      "link": "/faq"
+     },
+     {
+      "id": 5,
+      "icon": "menu-link__container__icon glyphicon glyphicon-edit",
+      "text": "Register",
+      "link": "/register"
+     },
+     {
+      "id": 6,
+      "icon": "menu-link__container__icon glyphicon glyphicon-share",
+      "text": "Login",
+      "link": "/login"
+     },
+     {
+      "id": 7,
+      "icon": "menu-link__container__icon glyphicon glyphicon-question-sign",
+      "text": "Help",
+      "link": "/help"
+     }
+  ]
+}

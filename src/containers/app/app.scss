@@ -1,0 +1,12 @@
+@import "../../styles/scss/main.scss";
+
+.app-container {
+	padding: 0px;
+}
+
+.app-container__content {
+	display: inline-block;
+	vertical-align: top;
+	height: 100vh;
+	width: calc(100% - 120px); //set to equal to $menuWidth
+}

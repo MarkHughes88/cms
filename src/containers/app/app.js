@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import '../../styles/scss/main.scss';
 import './app.scss';
 
-import Home from '../home/home';
+import Content from '../content/content';
+import Menu from '../menu/menu';
 
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div>
-          <Route exact path="/" component={ () => <Home />} />
-        </div>
-      </Router>
+        <div className='container-fluid app-container'>
+            <Menu />
+            <Content />
+      </div>
     );
   }
 }

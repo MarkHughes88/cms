@@ -1,0 +1,41 @@
+@import "../../styles/scss/main.scss";
+
+.menu-link {
+	&:hover {
+		text-decoration: none !important;
+	}
+}
+
+.menu-link__container {
+	border-bottom: 1px solid $borderColour;
+	border-left: 5px solid $menuBg;
+	padding: $padding;
+	list-style: none;
+	border-collapse: collapse;
+	background-color: lighten($menuBg, 5%);
+
+	&:hover {
+		border-left: 5px solid $brandPrimary;
+		background-color: darken($menuBg, 20%);
+		color: $fontWhite;
+	}
+}
+
+.menu-link__container__icon {
+	display: block;
+	text-align: center;
+	font-size: 40px;
+}
+
+.menu-link__container__text {
+	display: block;
+	text-align: center;
+}
+
+.menu-link:last-of-type {
+	position: absolute;
+	bottom: 0;
+	width: $menuWidth;
+	border-bottom: 0px;
+	border-top: 1px solid $borderColour;
+}

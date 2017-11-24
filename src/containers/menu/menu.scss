@@ -1,0 +1,8 @@
+@import "../../styles/scss/main.scss";
+
+.menu {
+	height: 100vh;
+	background-color: $menuBg;
+	width: $menuWidth;
+	display: inline-block;
+}
