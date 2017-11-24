@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import '../../styles/scss/main.scss';
 import './app.scss';
 
 import Content from '../content/content';
