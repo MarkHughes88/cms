@@ -1,7 +1,10 @@
 @import "../../styles/scss/main.scss";
 
 .menu-link {
-	&:hover {
+	&:hover,
+	&:link,
+	&:active,
+	&:visited {
 		text-decoration: none !important;
 	}
 }

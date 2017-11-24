@@ -8,5 +8,5 @@
 	display: inline-block;
 	vertical-align: top;
 	height: 100vh;
-	width: calc(100% - 120px); //set to equal to $menuWidth
+	width: calc(100% - #{$menuWidth});
 }

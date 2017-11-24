@@ -24,8 +24,7 @@ class MenuUser extends React.Component {
 		return (
 			<div className='menu-user'>
 				<img src='http://via.placeholder.com/75x75' className='img-circle center-block img-responsive' alt='' />
-				<span className='menu-user__welcome'></span>
-				<span className='menu-user__name'></span>
+				<h4>Admin</h4>
 			</div>
 		)
 	}
