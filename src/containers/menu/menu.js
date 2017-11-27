@@ -5,6 +5,7 @@ import './menu.scss';
 
 import User from '../../components/menu-user/menu-user';
 import Link from '../../components/menu-link/menu-link';
+import MenuSlider from '../../components/menu-slider/menu-slider';
 import myJson from '../../menu.json';
 
 class Menu extends React.Component {
@@ -32,8 +33,11 @@ class Menu extends React.Component {
 	render() {
 		return (
 			<div className='menu'>
-				<User />
-				{this.state.menuLinks}
+                <div className='menu__bar'>
+                    <User />
+                    {this.state.menuLinks}
+                </div>
+                <MenuSlider />
 			</div>
 		)
 	}

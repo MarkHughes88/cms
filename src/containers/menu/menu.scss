@@ -1,8 +1,15 @@
 @import "../../styles/scss/main.scss";
 
 .menu {
+	position: absolute;
+	z-index: 100;
+}
+
+.menu__bar {
 	height: 100vh;
 	background-color: $menuBg;
 	width: $menuWidth;
-	display: inline-block;
+	position: inherit;
+	left: 0;
+	top: 0;
 }

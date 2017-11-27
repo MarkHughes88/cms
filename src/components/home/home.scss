@@ -1,1 +1,7 @@
 @import '../../styles/scss/main.scss';
+
+.home-container {
+	height: 100vh;
+	@include flexbox();
+	@include align-items(center);
+}

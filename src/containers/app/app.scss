@@ -9,4 +9,5 @@
 	vertical-align: top;
 	height: 100vh;
 	width: calc(100% - #{$menuWidth});
+	margin-left: $menuWidth;
 }
