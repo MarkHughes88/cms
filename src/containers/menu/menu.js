@@ -3,44 +3,55 @@ import React from 'react';
 import '../../styles/scss/main.scss';
 import './menu.scss';
 
+import menu from '../../menu.json';
 import User from '../../components/menu-user/menu-user';
 import Link from '../../components/menu-link/menu-link';
-import MenuSlider from '../../components/menu-slider/menu-slider';
-import myJson from '../../menu.json';
+import Slider from '../../components/menu-slider/menu-slider';
 
 class Menu extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      menuLinks: []
+    constructor() {
+        super();
+        this.state = {
+            slider: {
+                active: false
+            },
+            menu: menu
+        }
     }
-  }
 
-  componentDidMount() {
-    let Links = myJson.Links.map((Links, key) => {
-      return (
-        <Link
-          key={Links.id}
-          text={Links.text}
-          icon={Links.icon}
-          link={Links.link}
-        />
-      )
-    })
-    this.setState({menuLinks: Links}); // <--
-  }
+    toggleSlider() {
+        this.setState({
+            slider: {
+                active: !this.state.slider.active
+            }
+        });
+    };
 
-	render() {
-		return (
-			<div className='menu'>
+    render() {
+        let Links = menu.Links.map(link => {
+            return (
+                <Link
+                    key={ link.id }
+                    text={ link.text }
+                    icon={ link.icon }
+                    link={ link.link }
+                    toggleSlider={ () => this.toggleSlider() }
+                />
+            )
+        });
+
+        return (
+            <div className='menu'>
                 <div className='menu__bar'>
                     <User />
-                    {this.state.menuLinks}
+
+                    { Links }
                 </div>
-                <MenuSlider />
-			</div>
-		)
-	}
+
+                <Slider active={this.state.slider.active} />
+            </div>
+        )
+    }
 }
 
 export default Menu;

@@ -2,17 +2,17 @@ import React from 'react';
 
 import './menu-link.scss'
 
-import MenuSlider from '../menu-slider/menu-slider';
-
-const MenuLink = ({ id, text, icon, link }) => {
-  return (
-    <a className="menu-link" onClick={ () => MenuSlider.toggleClass }>
-      <li className="menu-link__container">
-        <span className={ icon }></span>
-        <span className="menu-link__container__text">{ text }</span>
-      </li>
-    </a>
-  )
+class MenuLink extends React.Component {
+    render() {
+        return (
+            <a className="menu-link" onClick={ () => this.props.toggleSlider() }>
+                <li className="menu-link__container">
+                    <span className={ this.props.icon }></span>
+                    <span className="menu-link__container__text">{ this.props.text }</span>
+                </li>
+            </a>
+        )
+    }
 }
 
 export default MenuLink;
