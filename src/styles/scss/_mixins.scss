@@ -1,1 +1,8 @@
 @import "_flexbox.scss";
+
+@mixin transition($attr, $dur, $method) {
+-webkit-transition: $attr $dur $method;
+   -moz-transition: $attr $dur $method;
+     -o-transition: $attr $dur $method;
+        transition: $attr $dur $method;
+}
