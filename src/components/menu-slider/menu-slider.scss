@@ -1,29 +1,30 @@
 @import '../../styles/scss/main.scss';
 
 .menu__bar__slider {
-	background-color: #fefefe;
-	border: 1px solid $borderColour;
-
-	height: 100vh;
-	width: $menuSliderWidth;
-	padding: $padding;
-
 	display: inline-block;
 	position: absolute;
 	top: 0;
 	left: $menuWidth;
+	height: 100vh;
+	background-color: #fefefe;
 }
 
 .menu__bar__slider--hidden {
-	width: 0px;
-	padding: 0px;
-	border: none;
 	display: none;
 	@include transition(all, .2s, ease);
+
+	border: none;
+
+	width: 0px;
+	padding: 0px;
 }
 
 .menu__bar__slider--visible {
 	display: inline-block;
-	width: $menuSliderWidth;
 	@include transition(all, .2s, ease);
+
+	border: 1px solid $borderColour;
+
+	width: $menuSliderWidth;
+	padding: $padding;
 }
