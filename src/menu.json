@@ -3,7 +3,7 @@
     {
       "id": 1,
       "icon": "menu-link__container__icon glyphicon glyphicon-home",
-      "text": "home",
+      "text": "Home",
       "link": "/"
      },
      {

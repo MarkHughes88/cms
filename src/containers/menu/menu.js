@@ -20,15 +20,17 @@ class Menu extends React.Component {
         }
     }
 
+    setSliderState(state) {
+        this.setState({
+            slider: {
+                active: state
+            }
+        })
+    };
+
     toggleSlider(text) {
-        let match = text == 'home';
-        if(!match) {
-            this.setState({
-                slider: {
-                    active: !this.state.slider.active
-                }
-            })
-        }
+        let dontToggle = (text === 'Home') || (text === 'Help');
+        !dontToggle ? this.setSliderState(!this.state.slider.active) : this.setSliderState(false);
     };
 
     render() {
