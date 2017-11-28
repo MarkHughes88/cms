@@ -14,8 +14,7 @@ class Menu extends React.Component {
         this.state = {
             slider: {
                 active: false
-            },
-            menu: menu
+            }
         }
     }
 
@@ -28,8 +27,8 @@ class Menu extends React.Component {
     };
 
     toggleSlider(text) {
-        let dontToggle = (text === 'Home') || (text === 'Help');
-        !dontToggle ? this.setSliderState(!this.state.slider.active) : this.setSliderState(false);
+        let link = (text === 'Home') || (text === 'Help');
+        !link ? this.setSliderState(!this.state.slider.active) : this.setSliderState(false);
     };
 
     render() {

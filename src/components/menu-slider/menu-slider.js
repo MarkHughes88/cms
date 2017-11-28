@@ -6,6 +6,13 @@ import './menu-slider.scss'
 // import Pages from './pages/pages';
 
 class MenuSlider extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			currPage: false
+		}
+	}
+
 	render() {
 		return (
 			<div
