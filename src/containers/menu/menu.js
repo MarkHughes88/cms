@@ -13,23 +13,33 @@ class Menu extends React.Component {
         super();
         this.state = {
             slider: {
-                active: false
+                active: false,
+                content: null
             },
             menu: menu
         }
     }
 
-    setSliderState(state) {
+    setSliderState(active, content) {
+        /* note the ES6 usage of `content` and `active` below. Which will actually output: `active: active, content: content` */
         this.setState({
             slider: {
-                active: state
+                active,
+                content
             }
         })
     };
 
     toggleSlider(text) {
         let dontToggle = (text === 'Home') || (text === 'Help');
-        !dontToggle ? this.setSliderState(!this.state.slider.active) : this.setSliderState(false);
+
+        !dontToggle
+            ?
+            this.setSliderState(
+                !this.state.slider.active || this.state.slider.content !== text,
+                text
+            )
+            : this.setSliderState(false)
     };
 
     render() {
@@ -53,7 +63,7 @@ class Menu extends React.Component {
                     { Links }
                 </div>
 
-                <Slider active={this.state.slider.active} />
+                <Slider active={this.state.slider.active} content={ this.state.slider.content } />
             </div>
         )
     }
