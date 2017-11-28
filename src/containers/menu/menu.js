@@ -20,7 +20,6 @@ class Menu extends React.Component {
     }
 
     setSliderState(active, content) {
-        /* note the ES6 usage of `content` and `active` below. Which will actually output: `active: active, content: content` */
         this.setState({
             slider: {
                 active,

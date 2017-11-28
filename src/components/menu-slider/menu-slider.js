@@ -3,24 +3,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import '../../styles/scss/main.scss';
 import './menu-slider.scss'
-// import Pages from './pages/pages';
+import Pages from './pages/pages';
 
 class MenuSlider extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-			currPage: false
-		}
-	}
-
 	render() {
 		let content = null;
 		switch(content) {
-            case 'home':
-            	content = "Home";
-                break;
             case 'Pages':
-                content = "Pages";
+                return <Pages />;
                 break;
             case 'Media':
                 content = "Media";
