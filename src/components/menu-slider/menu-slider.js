@@ -14,6 +14,22 @@ class MenuSlider extends React.Component {
 	}
 
 	render() {
+		let content = null;
+		switch(content) {
+            case 'home':
+            	content = "Home";
+                break;
+            case 'Pages':
+                content = "Pages";
+                break;
+            case 'Media':
+                content = "Media";
+                break;
+            case 'Users':
+                content = "Users";
+                break;
+		}
+
 		return (
 			<div
 				className={
@@ -21,7 +37,7 @@ class MenuSlider extends React.Component {
 					'menu__bar__slider--visible' :
 					'menu__bar__slider--hidden'}`
 				}>
-				Menu slider
+				Menu slider for - { this.props.content }
 			</div>
 		)
 	}
