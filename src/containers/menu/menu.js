@@ -21,13 +21,14 @@ class Menu extends React.Component {
     }
 
     toggleSlider(text) {
-        console.log(text)
-            text === "Help" ? null :
-                this.setState({
-                    slider: {
-                        active: !this.state.slider.active
-                    }
-                })
+        let match = text == 'home';
+        if(!match) {
+            this.setState({
+                slider: {
+                    active: !this.state.slider.active
+                }
+            })
+        }
     };
 
     render() {
@@ -38,7 +39,7 @@ class Menu extends React.Component {
                     text={ link.text }
                     icon={ link.icon }
                     link={ link.link }
-                    toggleSlider={ () => this.toggleSlider() }
+                    toggleSlider={ (text) => this.toggleSlider(text) }
                 />
             )
         });
