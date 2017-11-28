@@ -18,7 +18,7 @@ class Help extends Component {
             <div className='container-fluid help-container'>
                 <h1>{this.state.Title}</h1>
                 <p>{this.state.Desc}</p>
-				<img src='http://via.placeholder.com/400x400' />
+				<img src='http://via.placeholder.com/400x400' alt='placeholder'/>
             </div>
         );
     }

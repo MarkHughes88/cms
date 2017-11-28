@@ -13,8 +13,7 @@ class Menu extends React.Component {
         super();
         this.state = {
             slider: {
-                active: false,
-                page: false
+                active: false
             },
             menu: menu
         }
