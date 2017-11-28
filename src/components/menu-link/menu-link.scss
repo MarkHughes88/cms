@@ -16,24 +16,26 @@
 	padding: $padding;
 	list-style: none;
 	border-collapse: collapse;
-	background-color: lighten($menuBg, 5%);
+	background-color: rgba(lighten($menuBg, 10%), .5);
+	font-size: $menuFontSize;
 
 	&:hover {
 		border-left: 5px solid $brandPrimary;
 		background-color: darken($menuBg, 20%);
-		color: $fontWhite;
 	}
 }
 
 .menu-link__container__icon {
 	display: block;
 	text-align: center;
-	font-size: 40px;
+	font-size: 25px;
+	color: $fontBlack;
 }
 
 .menu-link__container__text {
 	display: block;
 	text-align: center;
+	color: transparent;
 }
 
 .menu-link:last-of-type {

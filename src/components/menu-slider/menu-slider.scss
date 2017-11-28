@@ -7,6 +7,7 @@
 	left: $menuWidth;
 	height: 100vh;
 	background-color: #fefefe;
+	@include transition(all, .2s, ease);
 }
 
 .menu__bar__slider--hidden {
@@ -24,6 +25,7 @@
 	@include transition(all, .2s, ease);
 
 	border: 1px solid $borderColour;
+	border-left: 0px !important;
 
 	width: $menuSliderWidth;
 	padding: $padding;

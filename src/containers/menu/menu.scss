@@ -3,11 +3,23 @@
 .menu {
 	position: absolute;
 	z-index: 100;
+
+	&:Hover {
+		.menu__bar {
+			@include transition(all, .5s, ease);
+			background-color: $menuBg;
+		}
+
+		.menu-link__container__text {
+			@include transition(all, .5s, ease);
+			color: $menuLinkHover;
+		}
+	}
 }
 
 .menu__bar {
 	height: 100vh;
-	background-color: $menuBg;
+	background-color: lighten($menuBg, 5%);
 	width: $menuWidth;
 	position: inherit;
 	left: 0;

@@ -13,22 +13,25 @@ class Menu extends React.Component {
         super();
         this.state = {
             slider: {
-                active: false
+                active: false,
+                page: false
             },
             menu: menu
         }
     }
 
-    toggleSlider() {
-        this.setState({
-            slider: {
-                active: !this.state.slider.active
-            }
-        });
+    toggleSlider(text) {
+        console.log(text)
+            text === "Help" ? null :
+                this.setState({
+                    slider: {
+                        active: !this.state.slider.active
+                    }
+                })
     };
 
     render() {
-        let Links = menu.Links.map(link => {
+        var Links = menu.Links.map(link => {
             return (
                 <Link
                     key={ link.id }
