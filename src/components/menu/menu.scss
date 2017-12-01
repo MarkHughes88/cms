@@ -1,0 +1,19 @@
+@import '../../styles/scss/main.scss';
+
+.menu {
+	display: inline-block;
+	width: $menu-width;
+	height: 100vh;
+	padding: $menu-padding;
+	background-color: $menu-bg;
+}
+
+.menu__bar {
+	position: absolute;
+}
+
+.menu__bar__links {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}

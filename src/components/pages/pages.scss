@@ -1,0 +1,13 @@
+@import '../../styles/scss/main.scss';
+
+.pages-container {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: $index-pages;
+	width: calc(100% - #{$menu-width});
+	height: 100vh;
+	padding: $padding-lg;
+	margin-left: $menu-width;
+}

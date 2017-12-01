@@ -1,0 +1,25 @@
+@import '../../../styles/scss/main.scss';
+
+.menu__slider {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: $index-menu;
+	width: $menu-slider-width;
+	height: 100vh;
+	background-color: $menu-slider-bg;
+	padding: $padding;
+	border-right: $border-width solid $border-color;
+	margin-left: $menu-width;
+}
+
+.menu__slider--visible {
+	width: $menu-slider-width;
+	display: inline-block;
+}
+
+.menu__slider--hidden {
+	width: 0px;
+	display: none;
+}
